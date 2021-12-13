@@ -81,6 +81,7 @@ function checkAnswer(n) {
 
     if (correct == 10) {
         alert("Congratulations, you defeated the Goomba!")
+        //run a function to pull up a win modal
     }
     
 }
