@@ -108,9 +108,7 @@ body, html {
     background-repeat: no-repeat;
     /*"https://www.vhv.rs/dpng/d
     /152-1528668_mario-bros-clipart-enemy-flying-goomba-hd-png.png"*/
-    padding-bottom: 50px;
-
-    
+    padding-bottom: 50px;  
 
 }
 
@@ -124,14 +122,13 @@ body, html {
     align-content: center;
     color: white;
     font-weight: bold;
-    font-size: 20px;
-    
-    
+    font-size: 20px;    
 }
 
 button {
-    background-color: yellow;
-    color: black;
+    background: url("../images/blocks.png");
+    background-size: contain;
+    background-position: inherit;
     -webkit-text-stroke: .5px black;
     font-size: 18px;
     font-stretch: wider;
