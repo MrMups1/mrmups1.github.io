@@ -163,7 +163,7 @@ button {
 }
 
 
-.win {
+#win {
 visibility: hidden;
 display: grid;
 margin: auto;
