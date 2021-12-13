@@ -42,7 +42,7 @@ function addEventListeners() {
 document.getElementById('hint1').addEventListener("click", function(){hintme()}); //adds event listener to hint button
 
 function hintme() {
-    alert("The position in the grid corresponds to the factors of the hidden number!"); //creates an alert when hint button is
+    alert("Mario says - Remember your times tables! Yippee!"); //creates an alert when hint button is
 }
 
 var coin = new Howl({
