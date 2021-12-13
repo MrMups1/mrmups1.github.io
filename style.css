@@ -115,12 +115,14 @@ body, html {
     font-size: 20px;    
 }
 
-button {
-    background: url("../images/blocks.jpg");
+.square button {
+    background: url("../images/blocks.png");
     background-size: contain;
     background-position: inherit;
     background-repeat: no-repeat;
-    background-color: black;
+    background-color: gray;
+    height: 23px;
+    width: 23px;
     /*UPDATELOLZ*/
 }
 
@@ -130,6 +132,7 @@ button {
 
 #hint1 {
     margin-left: 200px;
+    background-color: yellow;
 }
 
 .alert {
