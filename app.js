@@ -73,7 +73,7 @@ function checkAnswer(n) {
         currentQuestion ++ // move on to the next question
         correct ++ //add a correct answer
         index = answers.indexOf(currentQuestion) // indexes the answer
-        answers.splice(index)//remove array element
+        answers.splice(index, index)//remove array element
         showQuestion() // show the next question  
         Score()
     } else {
