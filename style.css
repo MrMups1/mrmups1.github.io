@@ -119,6 +119,7 @@ button {
     background: url("../images/blocks.png");
     background-size: contain;
     background-position: inherit;
+    /*UPDATE*/
 }
 
 .hidden {
