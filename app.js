@@ -50,7 +50,7 @@ var coin = new Howl({
   });
 
 var hurt = new Howl({
-    src: ['../sounds/hurt.mp3']
+    src: ['../sounds/hurt.wav']
   });
 
 addEventListeners()
