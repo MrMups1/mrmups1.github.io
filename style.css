@@ -163,17 +163,3 @@ button {
 }
 
 
-.win {
-    position:absolute;
-    left:0;
-    right:0;
-    margin-left:auto;
-    width:300px;
-    margin-right:auto;
-    background-color: #000;
-    color: #FFF;
-    z-index:5;
-    text-align: center;
-    margin-top: 150px;
-    }
-}
