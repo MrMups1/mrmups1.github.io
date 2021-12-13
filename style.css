@@ -83,22 +83,12 @@ body, html {
 }
 
 .side-row {
-
-    /* ADD CODE HERE
-    
-    this should be 40px wide 
-    
-    */
     width: 40px;
     padding-right: 10px;
 }
+
 .main {
-    /* ADD CODE HERE
-    
-    this should be 400px wide
-    use css grid with 10 equally sized columns
-    
-    */
+
     Display: grid;
     width: 400px;
     grid-template-columns: repeat(10, 1fr);
