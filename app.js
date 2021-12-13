@@ -46,7 +46,7 @@ function hintme() {
 }
 
 var coin = new Howl({
-    src: ['..\sounds\coin.mp3']
+    src: ['../sounds/coin.mp3']
   });
 
 addEventListeners()
