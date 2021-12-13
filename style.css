@@ -129,9 +129,6 @@ button {
     background: url("../images/blocks.png");
     background-size: contain;
     background-position: inherit;
-    -webkit-text-stroke: .5px black;
-    font-size: 18px;
-    font-stretch: wider;
 }
 
 .hidden {
