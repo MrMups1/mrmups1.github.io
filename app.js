@@ -49,6 +49,10 @@ var coin = new Howl({
     src: ['../sounds/coin.mp3']
   });
 
+var hurt = new Howl({
+    src: ['../sounds/hurt.mp3']
+  });
+
 addEventListeners()
 // show the first question
 function checkAnswer(n) {
@@ -72,11 +76,12 @@ function checkAnswer(n) {
         index = answers.indexOf(currentQuestion) // indexes the answer
         showQuestion() // show the next question  
         Score()
-        coin.play();
+        coin.play(); //baDING!
 
     } else {
         mistakes ++ // add one to mistakes
         showMistakes() // show the mistakes
+        hurt.play();//owwwww!
     }
 
     if (correct == 10) {
