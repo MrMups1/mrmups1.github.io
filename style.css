@@ -164,6 +164,7 @@ button {
 
 
 .win {
+visibility: hidden;
 display: grid;
 margin: auto;
 position: absolute;
