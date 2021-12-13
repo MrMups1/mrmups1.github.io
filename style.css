@@ -161,3 +161,14 @@ button {
     font-weight: bold;
     color: white;
 }
+
+
+.win {
+margin: auto;
+position: absolute;
+top: 50px; left: 50px;
+bottom: 50px; right: 50px;
+background-color: #000;
+color: #FFF;
+z-index:5;
+}
