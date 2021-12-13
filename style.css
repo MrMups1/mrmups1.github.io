@@ -119,6 +119,7 @@ button {
     background: url("../images/blocks.jpg");
     background-size: contain;
     background-position: inherit;
+    background-repeat: no-repeat;
     /*UPDATE*/
 }
 
