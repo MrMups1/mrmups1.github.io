@@ -17,7 +17,7 @@ answers = answers.sort(() => Math.random() - 0.5)
 function showQuestion() {
     
     currentQuestion = answers[Math.floor(Math.random() * answers.length)];//selects a random array entry
-    console.log('currentQuestion')
+    console.log('hello world')
     if((answers[currentQuestion]) !== undefined) { //if the selector hits a missing element, redo
         currentQuestion ++;
         showQuestion ();}
