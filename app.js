@@ -45,6 +45,9 @@ function hintme() {
     alert("The position in the grid corresponds to the factors of the hidden number!"); //creates an alert when hint button is
 }
 
+var coin = new Howl({
+    src: ['..\sounds\coin.mp3']
+  });
 
 addEventListeners()
 // show the first question
@@ -69,6 +72,8 @@ function checkAnswer(n) {
         index = answers.indexOf(currentQuestion) // indexes the answer
         showQuestion() // show the next question  
         Score()
+        coin.play();
+
     } else {
         mistakes ++ // add one to mistakes
         showMistakes() // show the mistakes
@@ -85,4 +90,6 @@ function Score() {
 }
 
 Score()
+
+
 //todolist ?blocks, fail threshold, reset win/fail, sounds, splash/victory screen, hint button, pedagogy
