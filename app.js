@@ -18,7 +18,7 @@ function showQuestion() {
     
     currentQuestion = answers[Math.floor(Math.random() * answers.length)];//selects a random array entry
    
-    if((answers[currentQuestion]) === undefined) { //if the selector hits a missing element, redo
+    if((answers[currentQuestion]) === 'undefined') { //if the selector hits a missing element, redo
         currentQuestion ++;
         showQuestion ();}
         else document.getElementById('Question').innerHTML = (answers[currentQuestion])//sets the array entry to be the question
