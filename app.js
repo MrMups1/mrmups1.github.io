@@ -84,6 +84,10 @@ function checkAnswer(n) {
         //run a function to pull up a win modal
     }
     
+    if (mistakes == 10) {
+        alert("Oh dear, the Goomba Emerges victorious!")
+        //run a function to pull up a lose modal
+    }
 }
 
 function Score() { 
@@ -93,4 +97,4 @@ function Score() {
 Score()
 
 
-//todolist ?blocks, fail threshold, reset win/fail, sounds, splash/victory screen, hint button, pedagogy
+//todolist , fail threshold, reset win/fail, sounds, splash/victory screen, hint button, pedagogy
