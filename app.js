@@ -73,7 +73,7 @@ function checkAnswer(n) {
         document.getElementById(n).parentElement.innerHTML = row*col //show the row*col multiplication in place of the button
         currentQuestion ++ // move on to the next question
         correct ++ //add a correct answer
-        index = answers.indexOf(currentQuestion) // indexes the answer
+        //index = answers.indexOf(currentQuestion) // indexes the answer (now redundant due to coding misadventure)
         showQuestion() // show the next question  
         Score()
         coin.play(); //baDING!
@@ -102,4 +102,4 @@ function Score() {
 Score()
 
 
-//todolist , fail threshold, reset win/fail, sounds, splash/victory screen, hint button, pedagogy
+//todolist  reset win/fail, sounds, modals, hint button, pedagogy, ? separate page with difficulty selection that changes required correct answers to win
