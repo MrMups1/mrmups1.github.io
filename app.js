@@ -44,13 +44,21 @@ document.getElementById('hint1').addEventListener("click", function(){hintme()})
 function hintme() {
     alert("Mario says - Remember your times tables! Yippee!"); //creates an alert when hint button is
 }
-
+//sounds
 var coin = new Howl({
     src: ['../sounds/coin.mp3']
   });
 
 var hurt = new Howl({
     src: ['../sounds/hurt.wav']
+  });
+
+var victory = new Howl({
+    src: ['../sounds/smw_course_clear.wav']
+  });
+
+var defeat = new Howl({
+    src: ['../sounds/smw_game_over.wav']
   });
 
 addEventListeners()
@@ -85,12 +93,14 @@ function checkAnswer(n) {
     }
 
     if (correct == 10) {
-        alert("Congratulations, you defeated the Goomba!")
+        alert("Congratulations, you defeated the Goomba!");
+        victory.play();
         //run a function to pull up a win modal
     }
     
     if (mistakes == 0) {
-        alert("Oh dear, the Goomba Emerges victorious!")
+        alert("Oh dear, the Goomba Emerges victorious!");
+        defeat.play();
         //run a function to pull up a lose modal
     }
 }
