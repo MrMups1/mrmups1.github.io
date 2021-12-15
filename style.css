@@ -199,6 +199,8 @@ body, html {
 }
 
 #hint1 {
+    font-family: inherit;
+    font-size: 18px;
     margin-left: 200px;
     background-color: yellow;
 }
