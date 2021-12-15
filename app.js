@@ -1,5 +1,5 @@
 
-let mistakes = 0  // start the game with 0 mistakes
+let mistakes = 10  // start the game with 0 mistakes
 let currentQuestion = 0// start at question number 0
 let correct = 0 //counter for correct answers
 
@@ -79,7 +79,7 @@ function checkAnswer(n) {
         coin.play(); //baDING!
 
     } else {
-        mistakes ++ // add one to mistakes
+        mistakes -- // lose health
         showMistakes() // show the mistakes
         hurt.play();//owwwww!
     }
@@ -89,7 +89,7 @@ function checkAnswer(n) {
         //run a function to pull up a win modal
     }
     
-    if (mistakes == 10) {
+    if (mistakes == 0) {
         alert("Oh dear, the Goomba Emerges victorious!")
         //run a function to pull up a lose modal
     }
