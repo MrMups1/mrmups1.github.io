@@ -72,7 +72,7 @@ var hint = new Howl({
 })
 
 var bgm = new Howl({
-    src: ['../sounds/bgm.mp3'];
+    src: ['../sounds/bgm.mp3'],
     volume: 0.8
 })
 
