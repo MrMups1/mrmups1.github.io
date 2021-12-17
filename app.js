@@ -113,7 +113,6 @@ function toggleModal1() {
 function toggleintromodal() {
     intromodal.classList.toggle("show-modal");
     letsago.play();
-    bgm.stop();
     bgm.play();
     closeButton3.addEventListener("click",function(){toggleintromodal()} )
 }
