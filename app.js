@@ -3,6 +3,9 @@ let mistakes = 10  // start the game with 0 mistakes
 let currentQuestion = 0// start at question number 0
 let correct = 0 //counter for correct answers
 
+
+
+
 // the answers array should contain all possible combinations from the 10 times table including repeated value 
 let answers = [];
 for (let i = 1; i <= 10; i++) {
@@ -62,6 +65,32 @@ var defeat = new Howl({
   });
 
 addEventListeners()
+
+//modals
+
+const modal = document.querySelector(".modal");
+const closeButton = document.querySelector(".close-button");
+const modal1 = document.querySelector(".modal1");
+const closeButton1 = document.querySelector(".close-button1");
+
+//reload page function
+function reload() {
+    document.location.reload(true);
+}
+//win modal
+
+function toggleModal() {
+    modal.classList.toggle("show-modal");
+    closeButton.addEventListener("click", function(){reload()});
+}
+
+//lose modal
+
+function toggleModal1() {
+    modal1.classList.toggle("show-modal");
+    closeButton1.addEventListener("click", function(){reload()});
+}
+
 // show the first question
 function checkAnswer(n) {
     
@@ -93,13 +122,15 @@ function checkAnswer(n) {
     }
 
     if (correct == 10) {
-        alert("Congratulations, you defeated the Goomba!");
+        toggleModal();
+        //alert("Congratulations, you defeated the Goomba!");
         victory.play();
         //run a function to pull up a win modal
     }
     
     if (mistakes == 0) {
-        alert("Oh dear, the Goomba Emerges victorious!");
+        toggleModal1();
+        //alert("Oh dear, the Goomba Emerges victorious!");
         defeat.play();
         //run a function to pull up a lose modal
     }
