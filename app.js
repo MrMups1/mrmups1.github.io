@@ -40,13 +40,17 @@ function addEventListeners() {
         
     }
 }
-
-
-document.getElementById('hint1').addEventListener("click", function(){hintme()}); //adds event listener to hint button
-
-function hintme() {
-    alert("Mario says - Remember your times tables! Yippee!"); //creates an alert when hint button is
+function toggleHintmodal() {
+    hintmodal.classList.toggle("show-modal");
+    closeButton2.addEventListener("click", function(){toggleHintmodal()});
 }
+//function hintme() {
+  //  toggleHintmodal(); //creates an alert when hint button is
+//}
+
+document.getElementById('hint1').addEventListener("click", function(){toggleHintmodal()}); //adds event listener to hint button
+
+
 //sounds
 var coin = new Howl({
     src: ['../sounds/coin.mp3']
@@ -72,7 +76,8 @@ const modal = document.querySelector(".modal");
 const closeButton = document.querySelector(".close-button");
 const modal1 = document.querySelector(".modal1");
 const closeButton1 = document.querySelector(".close-button1");
-
+const hintmodal = document.querySelector(".hintmodal");
+const closeButton2 = document.querySelector(".close-button2");
 //reload page function
 function reload() {
     document.location.reload(true);
@@ -90,6 +95,7 @@ function toggleModal1() {
     modal1.classList.toggle("show-modal");
     closeButton1.addEventListener("click", function(){reload()});
 }
+
 
 // show the first question
 function checkAnswer(n) {
