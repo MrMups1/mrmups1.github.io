@@ -53,26 +53,27 @@ document.getElementById('hint1').addEventListener("click", function(){toggleHint
 //sounds
 var coin = new Howl({
     src: ['../sounds/coin.mp3']
-  });
+  })
 
 var hurt = new Howl({
     src: ['../sounds/hurt.wav']
-  });
+  })
 
 var victory = new Howl({
     src: ['../sounds/smw_course_clear.wav']
-  });
+  })
 
 var defeat = new Howl({
     src: ['../sounds/smw_game_over.wav']
-  });
+  })
 
 var hint = new Howl({
     src: ['../sounds/smw_pause.wav']
 })
 
 var bgm = new Howl({
-    src: ['../sounds/bgm.mp3']
+    src: ['../sounds/bgm.mp3'];
+    volume: 0.8
 })
 
 var letsago = new Howl({
@@ -112,6 +113,7 @@ function toggleModal1() {
 function toggleintromodal() {
     intromodal.classList.toggle("show-modal");
     letsago.play();
+    bgm.stop();
     bgm.play();
     closeButton3.addEventListener("click",function(){toggleintromodal()} )
 }
@@ -150,6 +152,7 @@ function checkAnswer(n) {
     if (correct == 10) {
         toggleModal();
         //alert("Congratulations, you defeated the Goomba!");
+        bgm.stop();
         victory.play();
         //run a function to pull up a win modal
     }
@@ -157,6 +160,7 @@ function checkAnswer(n) {
     if (mistakes == 0) {
         toggleModal1();
         //alert("Oh dear, the Goomba Emerges victorious!");
+        bgm.stop();
         defeat.play();
         //run a function to pull up a lose modal
     }
