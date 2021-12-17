@@ -71,6 +71,14 @@ var hint = new Howl({
     src: ['../sounds/smw_pause.wav']
 })
 
+var bgm = new Howl({
+    src: ['../sounds/bgm.mp3']
+})
+
+var letsago = new Howl({
+    src: ['../sounds/sm64_mario_lets_go.wav']
+})
+
 addEventListeners()
 
 //modals
@@ -81,6 +89,8 @@ const modal1 = document.querySelector(".modal1");
 const closeButton1 = document.querySelector(".close-button1");
 const hintmodal = document.querySelector(".hintmodal");
 const closeButton2 = document.querySelector(".close-button2");
+const intromodal = document.querySelector(".intromodal");
+const closeButton3 = document.querySelector(".close-button3");
 //reload page function
 function reload() {
     document.location.reload(true);
@@ -99,7 +109,14 @@ function toggleModal1() {
     closeButton1.addEventListener("click", function(){reload()});
 }
 
+function toggleintromodal() {
+    intromodal.classList.toggle("show-modal");
+    letsago.play();
+    bgm.play();
+    closeButton3.addEventListener("click",function(){toggleintromodal()} )
+}
 
+toggleintromodal();
 // show the first question
 function checkAnswer(n) {
     
