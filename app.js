@@ -45,9 +45,7 @@ function toggleHintmodal() {
     hint.play();
     closeButton2.addEventListener("click", function(){toggleHintmodal()});
 }
-//function hintme() {
-  //  toggleHintmodal(); //creates an alert when hint button is
-//}
+
 
 document.getElementById('hint1').addEventListener("click", function(){toggleHintmodal()}); //adds event listener to hint button
 
