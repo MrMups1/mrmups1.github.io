@@ -4,7 +4,6 @@ body, html {
   }
 
 .title {
-    /*display: grid;*/
     font-size: 45px;
     color: white;
     font-weight: bold;
@@ -38,10 +37,8 @@ body, html {
     color: white;
     font-weight: bold;
     margin: auto;
-   /* background-clip: content-box;*/
     background-color: transparent;
     width: 500px;
-    /*margin-top: 60px;*/
     text-align: center;
     contain: content;
     text-emphasis-color: white;
@@ -85,13 +82,9 @@ body, html {
 }
 
   .bg {
-   /* The image used  */
+
     background: url("../images/bg.jpg");
-  
-    /* Full height */
     height: 100%;
-  
-    /* Center and scale the image nicely */
     background-position: center;
     background-repeat: repeat-y;
     background-size: cover; 
@@ -104,13 +97,7 @@ body, html {
     padding-right: 50px;
 }
 
-.top-row {
-    /* ADD CODE HERE 
-    grid
-    Use css grid to create 11 equally sized columns 
-    
-    */
-    
+.top-row {   
     display: grid;
     grid-template-columns: repeat(11, 1fr);
     padding: 10px;
@@ -129,11 +116,6 @@ body, html {
     0 20px 20px rgba(0,0,0,.15); 
 }
 .bottom-row {
-    /* ADD CODE HERE
-    
-    use css grid with 2 columns with a ratio of 1:10 
-    
-    */
     display: grid;
     grid-template-columns: 1fr 10fr;
     padding: 2px
@@ -191,7 +173,7 @@ body, html {
     background-color: gray;
     height: 23px;
     width: 23px;
-    /*UPDATELOLZ*/
+
 }
 
 .hidden {
@@ -208,3 +190,47 @@ body, html {
 .alert {
     color: red;
 }
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    /*visibility: hidden;*/
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    z-index: 10;
+  }
+.modal-content {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+  }
+.close-button:hover {
+    background-color: darkgray;
+  }
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  }
