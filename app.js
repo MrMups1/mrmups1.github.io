@@ -42,6 +42,7 @@ function addEventListeners() {
 }
 function toggleHintmodal() {
     hintmodal.classList.toggle("show-modal");
+    hint.play();
     closeButton2.addEventListener("click", function(){toggleHintmodal()});
 }
 //function hintme() {
@@ -67,6 +68,10 @@ var victory = new Howl({
 var defeat = new Howl({
     src: ['../sounds/smw_game_over.wav']
   });
+
+var hint = new Howl({
+    src: ['../sounds/smw_pause.wav']
+})
 
 addEventListeners()
 
