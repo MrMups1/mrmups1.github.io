@@ -114,10 +114,15 @@ function toggleintromodal() {
     intromodal.classList.toggle("show-modal");
     letsago.play();
     bgm.play();
-    closeButton3.addEventListener("click",function(){toggleintromodal()} )
+    closeButton3.addEventListener("click",function(){toggleintromodal()})
 }
 
-toggleintromodal();
+function refresh() {
+    intromodal.classList.toggle("show-modal");
+    bgm.stop();
+    closeButton3.addEventListener("click",function(){toggleintromodal()})
+}
+refresh();
 // show the first question
 function checkAnswer(n) {
     
