@@ -3,7 +3,11 @@ let mistakes = 10  // start the game with 0 mistakes
 let currentQuestion = 0// start at question number 0
 let correct = 0 //counter for correct answers
 
+//sorts scaling
+var scale = 'scale(1)';
 
+ document.body.style.msTransform =   scale;       
+ document.body.style.transform = scale; 
 
 
 // the answers array should contain all possible combinations from the 10 times table including repeated value 
