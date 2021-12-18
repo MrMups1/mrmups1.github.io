@@ -84,6 +84,7 @@ body, html {
   .bg {
 
     background: url("../images/bg.jpg");
+    background-attachment: fixed;
     height: 100%;
     background-position: center;
     background-repeat: repeat-y;
