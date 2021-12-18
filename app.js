@@ -6,7 +6,7 @@ let correct = 0 //counter for correct answers
 //sorts scaling
 var scale = 'scale(1)';
 
- document.body.style.msTransform =   scale;       
+ document.body.style.msTransform = scale;       
  document.body.style.transform = scale; 
 
 
