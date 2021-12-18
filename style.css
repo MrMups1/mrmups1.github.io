@@ -30,7 +30,8 @@ body, html {
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15);
 
-}  
+} 
+
 .bottomtext {
    float: right; 
    font-size: 40px;
@@ -57,6 +58,7 @@ body, html {
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15);  
 }
+
 .score {
     
     float: left;
@@ -116,11 +118,11 @@ body, html {
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15); 
 }
+
 .bottom-row {
     display: grid;
     grid-template-columns: 1fr 10fr;
     padding: 2px
- 
 }
 
 .side-row {
@@ -150,7 +152,6 @@ body, html {
     background-position: inherit;
     background-repeat: no-repeat;
     padding-bottom: 50px;  
-
 }
 
 .square {
@@ -174,7 +175,6 @@ body, html {
     background-color: gray;
     height: 23px;
     width: 23px;
-
 }
 
 .hidden {
@@ -219,7 +219,7 @@ body, html {
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
     z-index: 10;
-  }
+}
 
 .hintmodal {
     position: fixed;
@@ -233,7 +233,8 @@ body, html {
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
     z-index: 10;
-  }
+}
+
 .intromodal {
     position: fixed;
     left: 0;
@@ -246,7 +247,8 @@ body, html {
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
     z-index: 10;
-  }
+}
+
 .modal-content {
     font-family: Arial, Helvetica, sans-serif;
     position: absolute;
@@ -258,7 +260,8 @@ body, html {
     width: 24rem;
     border-radius: 0.5rem;
     text-align: center;
-  }
+}
+
 .close-button {
     float: right;
     width: 1.5rem;
@@ -267,7 +270,7 @@ body, html {
     cursor: pointer;
     border-radius: 0.25rem;
     background-color: lightgray;
-  }
+}
 
 .close-button1 {
     float: right;
@@ -277,7 +280,7 @@ body, html {
     cursor: pointer;
     border-radius: 0.25rem;
     background-color: lightgray;
-  }
+}
 
 .close-button2 {
     float: right;
@@ -287,7 +290,7 @@ body, html {
     cursor: pointer;
     border-radius: 0.25rem;
     background-color: lightgray;
-  }
+}
 
 .close-button3 {
     
@@ -297,13 +300,15 @@ body, html {
     cursor: pointer;
     border-radius: 0.25rem;
     background-color: lightgray;
-  }
+}
+
 .close-button:hover {
     background-color: darkgray;
-  }
+}
+
 .show-modal {
     opacity: 1;
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-  }
+}

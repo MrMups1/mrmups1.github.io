@@ -21,7 +21,7 @@ function showQuestion() {
         document.getElementById('Question').innerHTML = (answers[currentQuestion])//sets the array entry to be the question
     }
 
-showQuestion();
+showQuestion(); //runs function on page load
 
 
 function showMistakes() {
@@ -30,7 +30,7 @@ function showMistakes() {
  
 }
 
-showMistakes();
+showMistakes();//updates the health on page refresh, starting at 10
 
 function addEventListeners() {
     
@@ -40,6 +40,7 @@ function addEventListeners() {
         
     }
 }
+//function to toggle the hint modal
 function toggleHintmodal() {
     hintmodal.classList.toggle("show-modal");
     hint.play();
@@ -50,7 +51,7 @@ function toggleHintmodal() {
 document.getElementById('hint1').addEventListener("click", function(){toggleHintmodal()}); //adds event listener to hint button
 
 
-//sounds
+//defines sounds for howler.js to control
 var coin = new Howl({
     src: ['../sounds/coin.mp3']
   })
@@ -80,10 +81,11 @@ var letsago = new Howl({
     src: ['../sounds/sm64_mario_lets_go.wav']
 })
 
-addEventListeners()
+addEventListeners()//adds event listeners to all the buttons on page load
 
 //modals
 
+// setup of constants for modal control
 const modal = document.querySelector(".modal");
 const closeButton = document.querySelector(".close-button");
 const modal1 = document.querySelector(".modal1");
@@ -92,10 +94,12 @@ const hintmodal = document.querySelector(".hintmodal");
 const closeButton2 = document.querySelector(".close-button2");
 const intromodal = document.querySelector(".intromodal");
 const closeButton3 = document.querySelector(".close-button3");
+
 //reload page function
 function reload() {
     document.location.reload(true);
 }
+
 //win modal
 
 function toggleModal() {
@@ -110,19 +114,21 @@ function toggleModal1() {
     closeButton1.addEventListener("click", function(){reload()});
 }
 
+//introduction modal, for closing intro modal
 function toggleintromodal() {
     intromodal.classList.toggle("show-modal");
     letsago.play();
     bgm.play();
     closeButton3.addEventListener("click",function(){toggleintromodal()})
 }
-
+//pulls up the intro modal on page refresh without starting sounds
 function refresh() {
     intromodal.classList.toggle("show-modal");
     bgm.stop();
     closeButton3.addEventListener("click",function(){toggleintromodal()})
 }
-refresh();
+refresh();//calls the refresh function to pull up the intro modal
+
 // show the first question
 function checkAnswer(n) {
     
@@ -142,39 +148,35 @@ function checkAnswer(n) {
         document.getElementById(n).parentElement.innerHTML = row*col //show the row*col multiplication in place of the button
         currentQuestion ++ // move on to the next question
         correct ++ //add a correct answer
-        //index = answers.indexOf(currentQuestion) // indexes the answer (now redundant due to coding misadventure)
         showQuestion() // show the next question  
-        Score()
+        Score() //runs the score function to update the score
         coin.play(); //baDING!
 
     } else {
-        mistakes -- // lose health
-        showMistakes() // show the mistakes
+        mistakes -- // lose 1 health
+        showMistakes() // update the mistakes html
         hurt.play();//owwwww!
     }
 
-    if (correct == 10) {
-        toggleModal();
-        //alert("Congratulations, you defeated the Goomba!");
-        bgm.stop();
-        victory.play();
-        //run a function to pull up a win modal
+    if (correct == 10) {//when the win condition is reached
+        toggleModal();//pull up the win modal
+        bgm.stop();//stop the background music
+        victory.play();//play the victory music
+        
     }
     
-    if (mistakes == 0) {
-        toggleModal1();
-        //alert("Oh dear, the Goomba Emerges victorious!");
-        bgm.stop();
-        defeat.play();
-        //run a function to pull up a lose modal
+    if (mistakes == 0) {//when the lose condition is reached
+        toggleModal1();//pull up the lose modal
+        bgm.stop();//stop the background music
+        defeat.play();//play the defeat music
+ 
     }
 }
 
-function Score() { 
+function Score() { //updates the coins html
         document.getElementById("scorehere").innerHTML = correct;
 }
 
-Score()
+Score()//updates score on refresh to start at 0
 
 
-//todolist  reset win/fail, sounds, modals, hint button, pedagogy, ? separate page with difficulty selection that changes required correct answers to win
